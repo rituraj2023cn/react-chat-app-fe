@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chat-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-sidebar {
+  flex: 1;
+  padding: 20px;
+  background-color: #f3f3f3;
+  overflow-y: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-sidebar h2 {
+  margin: 0 0 10px;
+}
+
+.conversation {
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.conversation:last-child {
+  border-bottom: none;
+}
+
+.contact-name {
+  font-weight: bold;
+}
+
+.last-message {
+  color: #777;
+}
+
+.create-conversation-btn {
+  margin-top: 10px;
+}
+
+.right-side-view {
+  flex: 3;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+.chat-window {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.message {
+  margin-bottom: 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+.user {
+  background-color: #DCF8C6;
+  align-self: flex-end;
+}
+
+.other {
+  background-color: #E5E5EA;
+}
+
+.no-conversation-selected {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
+  color: #777;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-container {
+  display: flex;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
